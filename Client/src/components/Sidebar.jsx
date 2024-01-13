@@ -25,7 +25,7 @@ export default function SidebarWithBurgerMenu() {
 
   return (
     <>
-      <div className='lg:hidden '>
+      <div className='lg:hidden bg-[#3B4252] '>
         <IconButton variant='text' size='lg' onClick={openDrawer}>
           {isDrawerOpen ? (
             <XMarkIcon className='h-8 w-8 stroke-2' />

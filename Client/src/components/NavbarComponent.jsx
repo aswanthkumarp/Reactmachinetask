@@ -7,7 +7,7 @@ const NavbarComponent = () => {
         <p className='text-sm font-semibold'>Good Morning!</p>
         <p>🌞</p>
       </div>
-      <div className='flex bg-white roundend-lg shadow-md ml-auto mr-2 justify-between p-1 rounded-lg gap-2'>
+      <div className='flex bg-white roundend-lg shadow-md ml-auto lg:mr-2 mr-16 justify-between p-1 rounded-lg gap-2 '>
         <div className='flex flex-col '>
           <p className='text-sm font-semibold'>John Doe</p>
           <p className='text-basic'>john@doe.com</p>

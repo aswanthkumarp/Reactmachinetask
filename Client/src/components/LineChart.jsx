@@ -45,7 +45,7 @@ const LineChart = () => {
       },
       markers: {
         size: 6,
-        colors:'#88C0D0'
+        colors: '#88C0D0',
       },
       xaxis: {
         axisTicks: {
@@ -77,7 +77,7 @@ const LineChart = () => {
       grid: {
         show: true,
         borderColor: '#dddddd',
-        
+
         xaxis: {
           lines: {
             show: true,
@@ -99,7 +99,7 @@ const LineChart = () => {
 
   return (
     <Card>
-      <CardBody className='px-2 pb-0'>
+      <CardBody className='px-2 pb-0 overflow-x-auto'>
         <Chart {...chartConfig} />
       </CardBody>
     </Card>

@@ -13,8 +13,8 @@ import FacebookLogo from '../assets/facebook.png';
 
 export default function ProfileCard() {
   return (
-    <Card className='w-72 h-96 mr-36 '>
-      <CardHeader floated={false}>
+    <Card className='lg:w-72 lg:h-96 h-40  w-screen lg:mr-36 '>
+      <CardHeader className='hidden lg:block' floated={false}>
         <img src={UserImg} alt='profile-picture' className='w-full h-full  ' />
       </CardHeader>
       <CardBody className='text-center'>

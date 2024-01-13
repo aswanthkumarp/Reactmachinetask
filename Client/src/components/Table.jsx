@@ -18,7 +18,7 @@ export function Table() {
   }, []);
 
   return (
-    <Card className='h-full w-3/4 mb-3 overflow-scroll'>
+    <Card className='h-full w-[85%] mb-3 overflow-scroll'>
       <table className='w-full min-w-max table-auto text-left'>
         <thead>
           <tr>
