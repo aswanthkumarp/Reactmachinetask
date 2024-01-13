@@ -1,9 +1,65 @@
-import React from 'react'
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Typography,
+  Tooltip,
+} from '@material-tailwind/react';
+import UserImg from '../assets/media.png';
+import TwitterLogo from '../assets/twitter.png';
+import InstagramLogo from '../assets/instagram.png';
+import FacebookLogo from '../assets/facebook.png';
 
-const UserDetail = () => {
+export default function ProfileCard() {
   return (
-    <div>UserDetail</div>
-  )
+    <Card className='w-72 h-96 mr-36 '>
+      <CardHeader floated={false}>
+        <img src={UserImg} alt='profile-picture' className='w-full h-full  ' />
+      </CardHeader>
+      <CardBody className='text-center'>
+        <Typography variant='h4' color='blue-gray' className='mb-2'>
+          Natalie Paisley
+        </Typography>
+        <Typography color='blue-gray' className='font-medium' textGradient>
+          CEO / Co-Founder
+        </Typography>
+      </CardBody>
+      <CardFooter className='flex justify-center gap-7 pt-2'>
+        <Tooltip content='Like'>
+          <Typography
+            as='a'
+            href='#facebook'
+            variant='lead'
+            color='blue'
+            textGradient
+          >
+            <img src={FacebookLogo} alt='' />
+          </Typography>
+        </Tooltip>
+        <Tooltip content='Follow'>
+          <Typography
+            as='a'
+            href='#twitter'
+            variant='lead'
+            color='light-blue'
+            textGradient
+          >
+            <img src={InstagramLogo} alt='' />
+          </Typography>
+        </Tooltip>
+        <Tooltip content='Follow'>
+          <Typography
+            as='a'
+            href='#instagram'
+            variant='lead'
+            color='purple'
+            textGradient
+          >
+            <img src={TwitterLogo} alt='' />
+          </Typography>
+        </Tooltip>
+      </CardFooter>
+    </Card>
+  );
 }
-
-export default UserDetail
