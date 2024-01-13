@@ -20,11 +20,11 @@ app.get('/api/table', (req, res) => {
 
 // Sample data for the pie chart
 const pieChartData = [
-  { label: 'Category A', value: 30 },
-  { label: 'Category B', value: 20 },
-  { label: 'Category C', value: 15 },
-  { label: 'Category D', value: 25 },
-  { label: 'Category E', value: 10 },
+  { label: 'Category A', value: 30, color: '#A3BE8C' },
+  { label: 'Category B', value: 20, color: '#4cca5d' },
+  { label: 'Category C', value: 15, color: '#a0eec0' },
+  { label: 'Category D', value: 25, color: '#44ec1a' },
+  { label: 'Category E', value: 10, color: '#5ec985' },
 ];
 
 app.get('/api/pie-chart', (req, res) => {
@@ -38,6 +38,14 @@ const graphData = [
   { x: 'Mar', y: 8 },
   { x: 'Apr', y: 12 },
   { x: 'May', y: 18 },
+  { x: 'June', y:0 },
+  { x: 'July', y: 0 },
+  { x: 'August', y: 0 },
+  { x: 'September', y: 0 },
+  { x: 'October', y:0 },
+  { x: 'November', y:0 },
+  { x: 'December', y:0 },
+
 ];
 
 app.get('/api/graph', (req, res) => {
