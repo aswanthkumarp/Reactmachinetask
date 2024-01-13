@@ -2,7 +2,7 @@ import UserImg from '../assets/Rectangle 10.png';
 
 const NavbarComponent = () => {
   return (
-    <div className='flex bg-transparent mt-5 '>
+    <div className='flex bg-transparent mt-3'>
       <div className='flex ml-8 justify-center items-center'>
         <p className='text-sm font-semibold'>Good Morning!</p>
         <p>🌞</p>

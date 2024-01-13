@@ -18,8 +18,8 @@ const LineChart = () => {
 
   const chartConfig = {
     type: 'line',
-    height: 240,
-    width: 540,
+    height: 440,
+    width: 640,
     series: [
       {
         name: 'Sales',
@@ -38,13 +38,14 @@ const LineChart = () => {
       dataLabels: {
         enabled: false,
       },
-      colors: ['#020617'],
+      colors: ['#88C0D0'],
       stroke: {
         lineCap: 'round',
         curve: 'smooth',
       },
       markers: {
-        size: 0,
+        size: 6,
+        colors:'#88C0D0'
       },
       xaxis: {
         axisTicks: {
@@ -76,7 +77,7 @@ const LineChart = () => {
       grid: {
         show: true,
         borderColor: '#dddddd',
-        strokeDashArray: 5,
+        
         xaxis: {
           lines: {
             show: true,
