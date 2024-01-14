@@ -15,7 +15,7 @@ const PieChart = () => {
         console.error('Error fetching pie chart data:', error);
       });
   }, []);
-
+  const staticColors = ['#A3BE8C', '#4cca5d', '#a0eec0', '#44ec1a', '#5ec985'];
   const chartConfig = {
     type: 'pie',
     width: 280,
@@ -33,7 +33,7 @@ const PieChart = () => {
       dataLabels: {
         enabled: false,
       },
-      colors: pieChartData.map((data) => data.color),
+      colors:staticColors,
       legend: {
         show: false,
       },
@@ -49,7 +49,7 @@ const PieChart = () => {
         {pieChartData.map((data, index) => (
           <li key={index} className='mb-2'>
             <span
-              style={{ backgroundColor: data.color }}
+              style={{ backgroundColor: staticColors[index] }}
               className='inline-block w-3 h-3 rounded-full mr-2'
             ></span>
             {data.label}
