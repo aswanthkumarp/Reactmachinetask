@@ -20,11 +20,11 @@ app.get('/api/table', (req, res) => {
 
 // Sample data for the pie chart
 const pieChartData = [
-  { label: 'Category A', value: 30, color: '#A3BE8C' },
-  { label: 'Category B', value: 20, color: '#4cca5d' },
-  { label: 'Category C', value: 15, color: '#a0eec0' },
-  { label: 'Category D', value: 25, color: '#44ec1a' },
-  { label: 'Category E', value: 10, color: '#5ec985' },
+  { label: 'Category A', value: 30, color: '' },
+  { label: 'Category B', value: 20, color: '' },
+  { label: 'Category C', value: 15, color: '' },
+  { label: 'Category D', value: 25, color: '' },
+  { label: 'Category E', value: 10, color: '' },
 ];
 
 app.get('/api/pie-chart', (req, res) => {
