@@ -7,7 +7,7 @@ const LineChart = () => {
   const [graphData, setGraphData] = useState([]);
 
   useEffect(() => {
-    Axios.get('http://localhost:3001/api/graph')
+    Axios.get('https://react-dashboard-w4cc.onrender.com/api/graph')
       .then((response) => {
         setGraphData(response.data);
       })
@@ -100,9 +100,9 @@ const LineChart = () => {
   return (
     <Card>
       <CardBody className='px-2 pb-0 overflow-x-auto '>
-      <div className='w-full max-w-[640px] mx-auto '>
-      <Chart {...chartConfig} />
-      </div>
+        <div className='w-full max-w-[640px] mx-auto '>
+          <Chart {...chartConfig} />
+        </div>
       </CardBody>
     </Card>
   );

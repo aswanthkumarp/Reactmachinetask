@@ -8,7 +8,7 @@ export function Table() {
   const [tableData, setTableData] = useState([]);
 
   useEffect(() => {
-    Axios.get('http://localhost:3001/api/table')
+    Axios.get('https://react-dashboard-w4cc.onrender.com/api/table')
       .then((response) => {
         setTableData(response.data);
       })

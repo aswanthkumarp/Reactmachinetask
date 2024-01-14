@@ -7,7 +7,7 @@ const PieChart = () => {
   const [pieChartData, setPieChartData] = useState([]);
 
   useEffect(() => {
-    Axios.get('http://localhost:3001/api/pie-chart')
+    Axios.get('https://react-dashboard-w4cc.onrender.com/api/pie-chart')
       .then((response) => {
         setPieChartData(response.data);
       })
@@ -33,9 +33,17 @@ const PieChart = () => {
       dataLabels: {
         enabled: false,
       },
-      colors:staticColors,
+      colors: staticColors,
       legend: {
         show: false,
+      },
+      tooltip: {
+        enabled: true,
+        y: {
+          formatter: function (val, { seriesIndex }) {
+            return pieChartData[seriesIndex].label + ': ' + val;
+          },
+        },
       },
     },
   };
