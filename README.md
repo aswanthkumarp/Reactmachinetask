@@ -30,7 +30,7 @@ The frontend includes the following components:
 
 ## Getting Started
 1. **Demo :**
-   ```bash
+   
    https://merndashboardchart.netlify.app/
 
 2. **Clone the repository:**
