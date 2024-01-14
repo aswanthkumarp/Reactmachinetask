@@ -15,7 +15,7 @@ The Express.js server provides sample data for the following components:
 1. **Clone the repository:**
 
    ```bash
-   [git clone https://github.com/yourusername/mern-dashboard.git](https://github.com/aswanthkumarp/Reactmachinetask.git)
+   https://github.com/aswanthkumarp/Reactmachinetask.git
    
 ## Frontend (Reactjs)
 
