@@ -20,11 +20,11 @@ app.get('/api/table', (req, res) => {
 
 // Sample data for the pie chart
 const pieChartData = [
-  { label: 'Category A', value: 30, color: '' },
-  { label: 'Category B', value: 20, color: '' },
-  { label: 'Category C', value: 15, color: '' },
-  { label: 'Category D', value: 25, color: '' },
-  { label: 'Category E', value: 10, color: '' },
+  { label: 'Category A', value: 30 },
+  { label: 'Category B', value: 20 },
+  { label: 'Category C', value: 15 },
+  { label: 'Category D', value: 25 },
+  { label: 'Category E', value: 10 },
 ];
 
 app.get('/api/pie-chart', (req, res) => {
@@ -38,14 +38,13 @@ const graphData = [
   { x: 'Mar', y: 8 },
   { x: 'Apr', y: 12 },
   { x: 'May', y: 18 },
-  { x: 'June', y:0 },
+  { x: 'June', y: 0 },
   { x: 'July', y: 0 },
   { x: 'August', y: 0 },
   { x: 'September', y: 0 },
-  { x: 'October', y:0 },
-  { x: 'November', y:0 },
-  { x: 'December', y:0 },
-
+  { x: 'October', y: 0 },
+  { x: 'November', y: 0 },
+  { x: 'December', y: 0 },
 ];
 
 app.get('/api/graph', (req, res) => {
@@ -53,5 +52,5 @@ app.get('/api/graph', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`)
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
