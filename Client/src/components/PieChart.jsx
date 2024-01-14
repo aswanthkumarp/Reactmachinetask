@@ -21,8 +21,8 @@ const PieChart = () => {
   const staticColors = ['#A3BE8C', '#4cca5d', '#a0eec0', '#44ec1a', '#5ec985'];
   const chartConfig = {
     type: 'pie',
-    width: 280,
-    height: 280,
+    width: '100%',
+    height: 240,
     series: pieChartData.map((data) => data.value),
     options: {
       chart: {
@@ -52,17 +52,17 @@ const PieChart = () => {
   };
 
   return (
-    <Card className='ml-3'>
+    <Card className=' overflow-scroll w-max'>
       {isLoading ? (
         <div className='flex justify-center items-center h-[280px] w-[280px] '>
           <Loading />
         </div>
       ) : (
         <div>
-          <CardBody className='mt-4 grid place-items-center px-2'>
+          <CardBody className='mt-4 grid place-items-center px-2 '>
             <Chart {...chartConfig} />
           </CardBody>
-          <ul className='list-none p-0 m-4 text-center mr-auto'>
+          <ul className='list-none p-0 m-4  text-left mr-auto'>
             {pieChartData.map((data, index) => (
               <li key={index} className='mb-2'>
                 <span

@@ -13,19 +13,19 @@ import FacebookLogo from '../assets/facebook.png';
 
 export default function ProfileCard() {
   return (
-    <Card className='lg:w-72 lg:h-96 h-40 w-[85%]   lg:mr-36  '>
+    <Card className='lg:w-72 lg:h-96 h-32 mb-4 w-[85%]   lg:mr-36  '>
       <CardHeader className='hidden lg:block' floated={false}>
         <img src={UserImg} alt='profile-picture' className='w-full h-full  ' />
       </CardHeader>
       <CardBody className='text-center'>
-        <Typography variant='h4' color='blue-gray' className='mb-2'>
+        <Typography  color='blue-gray' className='mb-2 lg:text-xl text-sm'>
           Natalie Paisley
         </Typography>
-        <Typography color='blue-gray' className='font-medium' textGradient>
+        <Typography color='blue-gray' className='font-medium lg:text-base text-sm' textGradient>
           CEO / Co-Founder
         </Typography>
       </CardBody>
-      <CardFooter className='flex justify-center gap-7 pt-2'>
+      <CardFooter className='flex justify-center gap-7 pt-0 lg:pt-2'>
         <Tooltip content='Like'>
           <Typography
             as='a'

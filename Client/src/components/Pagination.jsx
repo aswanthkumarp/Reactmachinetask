@@ -26,21 +26,21 @@ export function Pagination() {
   };
 
   return (
-    <div className='flex items-center justify-center lg:justify-center lg:items-center lg:gap-4 gap-1 '>
+    <div className='flex items-center justify-normal lg:justify-center lg:items-center lg:gap-4 gap-0 '>
       <Button
         variant='text'
-        className='flex items-center gap-2'
+        className='flex items-center'
         onClick={prev}
         disabled={active === 1}
       >
-        <ArrowLeftIcon strokeWidth={2} className='h-4 w-4' />
+        <ArrowLeftIcon strokeWidth={2} className='h-2 w-2 lg:h-4 lg:w-4' />
       </Button>
-      <div className='flex items-center gap-2'>
-        <IconButton {...getItemProps(1)}>1</IconButton>
-        <IconButton {...getItemProps(2)}>2</IconButton>
-        <IconButton {...getItemProps(3)}>..</IconButton>
-        <IconButton {...getItemProps(4)}>9</IconButton>
-        <IconButton {...getItemProps(5)}>10</IconButton>
+      <div className='flex w-max items-center gap-2'>
+        <IconButton size='sm'  {...getItemProps(1)}>1</IconButton>
+        <IconButton size='sm'  {...getItemProps(2)}>2</IconButton>
+        <IconButton size='sm' {...getItemProps(3)}>..</IconButton>
+        <IconButton  size='sm' {...getItemProps(4)}>9</IconButton>
+        <IconButton size='sm' {...getItemProps(5)}>10</IconButton>
       </div>
       <Button
         variant='text'
@@ -48,7 +48,7 @@ export function Pagination() {
         onClick={next}
         disabled={active === 5}
       >
-        <ArrowRightIcon strokeWidth={2} className='h-4 w-4' />
+        <ArrowRightIcon strokeWidth={2} className='h-2 w-2 lg:h-4 lg:w-4' />
       </Button>
     </div>
   );
