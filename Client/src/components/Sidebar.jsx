@@ -30,7 +30,7 @@ export default function SidebarWithBurgerMenu() {
           {isDrawerOpen ? (
             <XMarkIcon className='h-8 w-8 stroke-2' />
           ) : (
-            <Bars3Icon className='h-8 w-8 stroke-2' />
+            <Bars3Icon className='h-8 w-8 stroke-2 bg-white' />
           )}
         </IconButton>
       </div>
@@ -76,7 +76,7 @@ export default function SidebarWithBurgerMenu() {
       <Drawer
         open={isDrawerOpen}
         onClose={closeDrawer}
-        className='bg-[#3B4252] sticky'
+        className='bg-[#3B4252]  absolute'
       >
         <Card color='transparent' shadow={false} className=' h-full w-full '>
           <div className='mb-2 flex flex-col items-center gap-4 p-4'>
