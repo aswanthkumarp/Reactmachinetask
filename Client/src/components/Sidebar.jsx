@@ -76,7 +76,7 @@ export default function SidebarWithBurgerMenu() {
       <Drawer
         open={isDrawerOpen}
         onClose={closeDrawer}
-        className='bg-[#3B4252]'
+        className='bg-[#3B4252] sticky'
       >
         <Card color='transparent' shadow={false} className=' h-full w-full '>
           <div className='mb-2 flex flex-col items-center gap-4 p-4'>
