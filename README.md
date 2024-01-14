@@ -10,13 +10,9 @@ The Express.js server provides sample data for the following components:
 - **Pie Chart Data:** `/api/pie-chart`
 - **Graph Data:** `/api/graph`
 
-### Getting Started
+### Tech Stack
+**Server:** Node, Express,Cors,Nodemon
 
-1. **Clone the repository:**
-
-   ```bash
-   https://github.com/aswanthkumarp/Reactmachinetask.git
-   
 ## Frontend (Reactjs)
 
 The frontend is built using Vite.js, Material Tailwind for styling, Axios for API connections, and Apex Charts for visualizations.
@@ -30,9 +26,20 @@ The frontend includes the following components:
 
 
 ### Tech Stack
+**Client:** React, Vite,Tailwind CSS, Material Tailwind,Axios,Apex Chart
 
-**Client:** React, Vite, Material Tailwind,Axios,Apex Chart
+## Getting Started
+1. **Demo :**
+   ```bash
+   https://merndashboardchart.netlify.app/
 
-**Server:** Node, Express,Cors,Nodemon
+2. **Clone the repository:**
+
+   ```bash
+   https://github.com/aswanthkumarp/Reactmachinetask.git
+   
+
+
+
 
    
