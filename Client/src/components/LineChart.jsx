@@ -2,14 +2,17 @@ import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
 import { Card, CardBody } from '@material-tailwind/react';
 import Chart from 'react-apexcharts';
+import Loading from './Loading';
 
 const LineChart = () => {
   const [graphData, setGraphData] = useState([]);
+  const [isLoading,setIsLoading] = useState(true)
 
   useEffect(() => {
     Axios.get('https://react-dashboard-w4cc.onrender.com/api/graph')
       .then((response) => {
         setGraphData(response.data);
+        setIsLoading(false)
       })
       .catch((error) => {
         console.error('Error fetching graph data:', error);
@@ -100,9 +103,15 @@ const LineChart = () => {
   return (
     <Card>
       <CardBody className='px-2 pb-0 overflow-x-auto '>
+      {isLoading ? (
+        <div className='flex justify-center items-center h-[440px] w-[640px] text-center '>
+          <Loading/>
+        </div>
+      ):(
         <div className='w-full max-w-[640px] mx-auto '>
           <Chart {...chartConfig} />
         </div>
+      )}
       </CardBody>
     </Card>
   );

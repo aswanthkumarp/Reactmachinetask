@@ -1,16 +1,19 @@
 import { Card, Typography } from '@material-tailwind/react';
 import Axios from 'axios';
 import { useEffect, useState } from 'react';
+import Loading from './Loading';
 
 const TABLE_HEAD = ['id', 'Name', 'Quantity', 'Price'];
 
 export function Table() {
   const [tableData, setTableData] = useState([]);
+  const [isLoading,setIsLoading] = useState(true)
 
   useEffect(() => {
     Axios.get('https://react-dashboard-w4cc.onrender.com/api/table')
       .then((response) => {
         setTableData(response.data);
+        setIsLoading(false)
       })
       .catch((error) => {
         console.error('Error fetching table data:', error);
@@ -39,46 +42,40 @@ export function Table() {
           </tr>
         </thead>
         <tbody>
-          {tableData.map(({ id, name, quantity, price }, index) => (
-            <tr key={id} className={`${index % 2 === 0 ? 'bg-[#E5E9F0]' : ''}`}>
-              <td className='p-4 border-l border-blue-gray-100'>
-                <Typography
-                  variant='small'
-                  color='blue-gray'
-                  className='font-normal'
-                >
-                  {id}
-                </Typography>
-              </td>
-              <td className='p-4 border-l border-blue-gray-100'>
-                <Typography
-                  variant='small'
-                  color='blue-gray'
-                  className='font-normal'
-                >
-                  {name}
-                </Typography>
-              </td>
-              <td className='p-4 border-l border-blue-gray-100'>
-                <Typography
-                  variant='small'
-                  color='blue-gray'
-                  className='font-normal'
-                >
-                  {quantity}
-                </Typography>
-              </td>
-              <td className='p-4 border-l border-blue-gray-100'>
-                <Typography
-                  variant='small'
-                  color='blue-gray'
-                  className='font-normal'
-                >
-                  {price}
-                </Typography>
+        {isLoading ? (
+            <tr>
+              <td colSpan={TABLE_HEAD.length} className='p-4 border-l border-blue-gray-100 '>
+              <div className='flex justify-center items-center w-full'>
+              <Loading/>
+              </div>
               </td>
             </tr>
-          ))}
+          ) : (
+            tableData.map(({ id, name, quantity, price }, index) => (
+              <tr key={id} className={`${index % 2 === 0 ? 'bg-[#E5E9F0]' : ''}`}>
+                <td className='p-4 border-l border-blue-gray-100'>
+                  <Typography variant='small' color='blue-gray' className='font-normal'>
+                    {id}
+                  </Typography>
+                </td>
+                <td className='p-4 border-l border-blue-gray-100'>
+                  <Typography variant='small' color='blue-gray' className='font-normal'>
+                    {name}
+                  </Typography>
+                </td>
+                <td className='p-4 border-l border-blue-gray-100'>
+                  <Typography variant='small' color='blue-gray' className='font-normal'>
+                    {quantity}
+                  </Typography>
+                </td>
+                <td className='p-4 border-l border-blue-gray-100'>
+                  <Typography variant='small' color='blue-gray' className='font-normal'>
+                    {price}
+                  </Typography>
+                </td>
+              </tr>
+            ))
+          )}
         </tbody>
       </table>
     </Card>
