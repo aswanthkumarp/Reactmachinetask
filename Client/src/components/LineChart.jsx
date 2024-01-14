@@ -99,8 +99,10 @@ const LineChart = () => {
 
   return (
     <Card>
-      <CardBody className='px-2 pb-0 overflow-x-auto'>
-        <Chart {...chartConfig} />
+      <CardBody className='px-2 pb-0 overflow-x-auto '>
+      <div className='w-full max-w-[640px] mx-auto '>
+      <Chart {...chartConfig} />
+      </div>
       </CardBody>
     </Card>
   );
